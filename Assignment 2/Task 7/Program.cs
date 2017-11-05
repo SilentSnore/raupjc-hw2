@@ -37,6 +37,11 @@ namespace Task_7
         /// </sumary>
         public static async Task<int> FactorialDigitSumAsync(int n)
         {
+           return await Task.Run(() => factorialDigitSum(n));
+        }
+
+        private static int factorialDigitSum(int n)
+        {
             if (n > 0)
             {
                 int factorial = 1;
